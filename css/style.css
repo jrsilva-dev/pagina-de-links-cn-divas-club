@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffcfe7, #ffcfe7);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-element {
+    position: absolute;
+    opacity: 0.2;
+    z-index: -1; 
+    pointer-events: none;
+}
+
+
+.eyelash {
+    top: 10%;
+    left: 10%;
+    width: 150px;
+    height: 50px;
+    background: radial-gradient(ellipse, #d63384 50%, transparent 50%);
+    border-radius: 50% 50% 0 0;
+    transform: rotate(15deg);
+}
+
+
+.nail-polish {
+    top: 20%;
+    right: 15%;
+    width: 80px;
+    height: 120px;
+    background: linear-gradient(to bottom, #a855f7 70%, #d63384 30%);
+    border-radius: 10px 10px 20px 20px;
+    position: relative;
+}
+.nail-polish::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 20px;
+    background: #ffcfe7;
+    border-radius: 50%;
+}
+
+
+.lipstick {
+    bottom: 30%;
+    left: 20%;
+    width: 60px;
+    height: 100px;
+    background: linear-gradient(to bottom, #d63384 80%, #a855f7 20%);
+    border-radius: 5px;
+    transform: rotate(-10deg);
+}
+
+
+.manicure {
+    top: 50%;
+    right: 10%;
+    width: 100px;
+    height: 60px;
+    background: linear-gradient(to right, #ffcfe7 50%, #d63384 50%);
+    border-radius: 20px 20px 50px 50px;
+    transform: rotate(20deg);
+}
+
+.eyeliner {
+    bottom: 10%;
+    left: 50%;
+    width: 120px;
+    height: 10px;
+    background: linear-gradient(to right, transparent 20%, #d63384 50%, transparent 80%);
+    border-radius: 5px;
+    transform: rotate(5deg);
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.profile-image:hover {
+    box-shadow:
+      0 0 15px #d63384,
+      0 0 30px #ffcfe7,
+      0 0 45px #d63384,
+      0 0 60px #ffcfe7;
+    transform: scale(1.05);
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    background: rgb(255, 212, 233);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #d63384;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    background: linear-gradient(135deg, #d63384, #a855f7);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #999;
+}
+
+.background-element {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.eyelash {
+    width: 120px;
+    height: 60px;
+    background: #ffcfe7;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    border: 3px solid #d63384;
+    transform: rotate(45deg);
+    top: 10%;
+    left: 10%;
+}
+
+.eyelash::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: 40px;
+    background: #a855f7;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    transform: rotate(-45deg);
+}
+
+.nail-polish {
+    width: 100px;
+    height: 150px;
+    background: #ffcfe7;
+    border: 3px solid #d63384;
+    border-radius: 10px;
+    top: 20%;
+    right: 15%;
+}
+
+.nail-polish::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    width: 60px;
+    height: 30px;
+    background: #a855f7;
+    border-radius: 50% 50% 10px 10px;
+}
+
+.nail-polish::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 100px;
+    background: rgba(168, 85, 247, 0.5);
+    border-radius: 5px;
+}
+
+.lipstick {
+    width: 80px;
+    height: 120px;
+    background: #ffcfe7;
+    border: 3px solid #d63384;
+    border-radius: 10px;
+    top: 40%;
+    left: 20%;
+}
+
+.lipstick::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    width: 40px;
+    height: 25px;
+    background: #a855f7;
+    border-radius: 50% 50% 5px 5px;
+}
+
+.lipstick::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    width: 40px;
+    height: 80px;
+    background: rgba(214, 51, 132, 0.5);
+    border-radius: 5px;
+}
+
+.manicure {
+    width: 150px;
+    height: 80px;
+    background: #ffcfe7;
+    border-radius: 50% 50% 50% 50% / 80% 80% 20% 20%;
+    border: 3px solid #d63384;
+    transform: rotate(-15deg);
+    top: 60%;
+    right: 10%;
+}
+
+.manicure::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 110px;
+    height: 40px;
+    background: #a855f7;
+    border-radius: 50% 50% 50% 50% / 80% 80% 20% 20%;
+}
+
+.eyeliner {
+    width: 140px;
+    height: 40px;
+    background: #ffcfe7;
+    border: 3px solid #d63384;
+    border-radius: 20px;
+    top: 80%;
+    left: 15%;
+}
+
+.eyeliner::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 130px;
+    height: 30px;
+    background: #a855f7;
+    border-radius: 15px;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .button {
+        font-size: 16px;
+        padding: 15px;
+        margin: 15px 0;
+        width: 100%;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .background-element {
+        opacity: 0.1;
+    }
+
+    .eyelash {
+        width: 80px;
+        height: 40px;
+        top: 5%;
+        left: 5%;
+    }
+
+    .eyelash::before {
+        width: 60px;
+        height: 20px;
+    }
+
+    .nail-polish {
+        width: 60px;
+        height: 90px;
+        top: 15%;
+        right: 5%;
+    }
+
+    .nail-polish::before {
+        width: 40px;
+        height: 20px;
+        left: 10px;
+    }
+
+    .nail-polish::after {
+        width: 40px;
+        height: 60px;
+        left: 10px;
+        top: 15px;
+    }
+
+    .lipstick {
+        width: 50px;
+        height: 80px;
+        top: 30%;
+        left: 10%;
+    }
+
+    .lipstick::before {
+        width: 30px;
+        height: 15px;
+        left: 10px;
+    }
+
+    .lipstick::after {
+        width: 30px;
+        height: 50px;
+        left: 10px;
+        top: 10px;
+    }
+
+    .manicure {
+        width: 100px;
+        height: 50px;
+        top: 50%;
+        right: 5%;
+    }
+
+    .manicure::before {
+        width: 70px;
+        height: 25px;
+        left: 15px;
+        top: 12px;
+    }
+
+    .eyeliner {
+        width: 90px;
+        height: 25px;
+        top: 70%;
+        left: 10%;
+    }
+
+    .eyeliner::before {
+        width: 80px;
+        height: 15px;
+        left: 5px;
+        top: 5px;
+    }
+}
